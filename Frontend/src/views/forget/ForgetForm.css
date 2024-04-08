@@ -1,0 +1,65 @@
+.forget-password {
+    width: 100vw;
+    max-width: 800px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+  
+div.form-forget {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+}
+.header-form-forget h1 {
+  padding: 1em;
+}
+.body-form-forget {
+  width: 90%;
+}
+.body-form-forget h3{
+  text-transform: uppercase;
+  text-align: center;
+  margin: .5em;
+}
+.body-form-forget input {
+  width: 100%;
+  height: auto;
+  font-size: 1.5em;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  margin: 5%;
+  background-color: transparent;
+  color: white;
+}
+.link-login a{
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+}
+.submit-forget {
+  padding: 1.5em;
+}
+.submit-forget button {
+  padding: 1em;
+  border: 1px solid white;
+  border-radius: 1rem;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+@media (min-width: 1025px) {
+  .body-form input {
+    font-size: 1.7em;
+    width: 95%;
+  }
+}

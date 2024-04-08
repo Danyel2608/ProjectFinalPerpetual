@@ -1,0 +1,13 @@
+.alert-confirm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50vh;
+}
+.alert-confirm p{
+    color: white;
+    font-size: 4em;
+    border: 1px solid white;
+    margin: 0 4%;
+}
