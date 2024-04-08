@@ -59,7 +59,7 @@ function CardsCamisetas() {
         }
         let fotoCamiseta = e.target.parentNode.parentNode.firstChild.firstChild.src;
         let description = e.target.parentNode.parentNode.firstChild.nextSibling.lastChild.firstChild.textContent;
-        let price = e.target.parentNode.parentNode.firstChild.nextSibling.lastChild.lastChild.firstChild.textContent;
+        let price = e.target.parentNode.parentNode.firstChild.nextSibling.lastChild.lastChild.lastChild.textContent;
         let quantity = 1;
         updateTotal();
         let contentItem = `
@@ -125,7 +125,7 @@ function CardsCamisetas() {
                     <div className="cardBody">
                         <p>BLACK T-SHIRT</p>
                         <div className="prices-content">
-                            <p>€</p>
+                            <p className='currency'>€</p>
                             <p className='price'>20</p>
                         </div>
                     </div>
@@ -143,7 +143,7 @@ function CardsCamisetas() {
                     <div className="cardBody">
                         <p>WHITE T-SHIRT</p>
                         <div className="prices-content">
-                            <p>€</p>
+                            <p className='currency'>€</p>
                             <p className='price'>20</p>
                         </div>
                     </div>

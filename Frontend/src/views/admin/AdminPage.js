@@ -149,7 +149,8 @@ function AdminPage({ onLogout }) {
             setVisible(true);
             setModalAdmin({ title: "Error", message: error, itsOk: false });
         }
-    }; const handleCloseModal = () => {
+    }; 
+    const handleCloseModal = () => {
         setVisible(false);
     };
     const handleLogout = () => {

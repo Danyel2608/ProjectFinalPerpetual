@@ -32,8 +32,10 @@ div.camisetas {
 }
 .prices-content{
   display: flex;
+  text-align: end;
 }
 p.price {
+  width: 2%;
   text-align: end;
 }
 .card .shop {

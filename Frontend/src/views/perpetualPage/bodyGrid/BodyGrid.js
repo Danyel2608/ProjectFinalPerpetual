@@ -8,10 +8,34 @@ import lamina4 from "../../../assets/Proyectos/4.jpeg";
 import lamina5 from "../../../assets/Proyectos/5.jpeg";
 import lamina6 from "../../../assets/Proyectos/6.jpeg";
 import gift from "../../../assets/Proyectos/gift.jpg";
+import ReactDOM from 'react-dom';
+import { useState } from 'react';
+import ModalFormInfo from './ModalInformation/ModalFormInfo';
 
 function BodyGrid() {
+    const [modalInfo, setModalInfo] = useState({
+        title: "",
+        message: "",
+        itsOk: false,
+    });
+    const [visible, setVisible] = useState(false);
+
+    const OpenModalInfo = () => {
+        setVisible(true);
+        setModalInfo({ title: "Complete form, follow the steps to finish sending the inquiry to Perpetual.", message: "Perpetual has received your inquiry, we will contact you as soon as possible.", itsOk: true })
+    }
+    const handleCloseModal = () => {
+        setVisible(false);
+    };
+
     return (
         <div className="body">
+            {
+                ReactDOM.createPortal(
+                    <ModalFormInfo visible={visible} data={modalInfo} onClose={handleCloseModal} />,
+                    document.querySelector("#modal")
+                )
+            }
             {/* Laminas hechas por Perpetual Tattoo */}
             <div className="grid" id="laminas">
                 <img src={lamina1} alt="1" />
@@ -37,11 +61,11 @@ function BodyGrid() {
             {/* Formulario de dudas que se enviará a un correo Gmail */}
             <div className="help" id="help">
                 <h2>DO YOU NEED ADDITIONAL INFORMATION?</h2>
-                <form action="https://formsubmit.co/consultaskoke@gmail.com" method="POST" enctype="multipart/form-data">
+                <form action="https://formsubmit.co/consultaskoke@gmail.com" method="POST" enctype="multipart/form-data" onSubmit={OpenModalInfo}>
                     <input type="text" name="userName" placeholder="Name" required />
-                    <input type="text" name="lastName" placeholder="Last Name"/>
-                    <input type="email" name="email" id="emailForm" placeholder="Email" required/>
-                    <input type="text" name="text" placeholder="Write here..." className="textDescription" required/>
+                    <input type="text" name="lastName" placeholder="Last Name" />
+                    <input type="email" name="email" id="emailForm" placeholder="Email" required />
+                    <input type="text" name="text" placeholder="Write here..." className="textDescription" required />
                     <input type="file" name="fileImgage" id="fileImage" />
                     <div className="buttonForm">
                         <button type="submit">Send</button>
