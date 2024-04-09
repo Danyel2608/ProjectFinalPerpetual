@@ -69,7 +69,7 @@ function Comentarios() {
             <div className="bodyComments">
                 <div className="headerComment">
                     <div className="iconsHeader">
-                        <a href="/">
+                        <a href={token ? "/home" : "/"}>
                             <i className="fa-solid fa-house"></i>
                         </a>
                         <a href="/login">

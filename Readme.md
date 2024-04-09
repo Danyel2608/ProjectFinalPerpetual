@@ -1,4 +1,4 @@
-<h1>Project by Daniel Salcedo Vivancos</h1>
+<h1 style="text-align:center">Project by Daniel Salcedo Vivancos</h1>
 <h2>Description</h2>
 <p>First of all, I want to talk my elections to frontend and backend.
 After many turns, I finally have chosen React for frontend,and NodeJs and MongoDB for backend.
@@ -7,7 +7,8 @@ On the other hand, I chose NodeJs and MondoDB, even though they are not as used 
 </p>
 <br>
 <h2>Start</h2>
-<p>In order to run the project we will need install <strong>React and NodeJs</strong>,React in frontend and NodeJs for backend, with the commands npm run dev in the Backend repository and npm start in React with the Frontend repository, we could now see the project.</p>
+<p>In order to run the project we will need install <strong>React and NodeJs</strong>,React in frontend and NodeJs for backend, with the commands npm run dev in the Backend repository and npm start in React with the Frontend repository, we could now see the project.</p><br>
+<p>For the backend, we will need the dependencies: bcrypt, cors, dotenv, express, jsonwebtoken, mongoose, nodemailer, and nodemon.</p>
 <br>
 <h2>Basic</h2>
 <p>I wanted to show how logins, users and dates are structured within my database.</p>
@@ -21,6 +22,8 @@ On the other hand, I chose NodeJs and MondoDB, even though they are not as used 
   "role": "admin",<br>
   "lastName": "Martos",<br>
   "rememberMe": false,<br>
+  "answerPrivate":"Antonio Machado"<br>
+  "confirmEmail":true<br>
   "__v": 0
 }<br>
 <br><p>with logins endpoints:</p>
@@ -67,6 +70,12 @@ On the other hand, I chose NodeJs and MondoDB, even though they are not as used 
         <td>DELETE</td>
         <td>delete user</td>
         <td>admin</td>
+    <tr>
+    <tr>
+        <td>http://localhost:8001/emails/confirmar/:email</td>
+        <td>PUT</td>
+        <td>Confirm email user</td>
+        <td>admin and admin</td>
     <tr>
 <table>
 <br><li style="list-style: decimal"><strong>Dates</strong></li>

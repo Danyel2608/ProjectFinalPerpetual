@@ -177,7 +177,7 @@ function DatesPage() {
                 )
             }
             <div className="title-dates">
-                <h2>Dates</h2>
+                <h2>Reserved Dates</h2>
                 <div className="title-dates-end">
                     <input type="text" name="textDate" id="textDate" placeholder='YYYY-MM-DD' onBlur={saveTextDates} />
                     <i class="fa-solid fa-plus" onClick={addDates}></i>
