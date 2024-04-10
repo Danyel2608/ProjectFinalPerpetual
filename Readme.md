@@ -8,10 +8,56 @@ On the other hand, I chose NodeJs and MondoDB, even though they are not as used 
 <br>
 <h2>Start</h2>
 <p>In order to run the project we will need install <strong>React and NodeJs</strong>,React in frontend and NodeJs for backend, with the commands npm run dev in the Backend repository and npm start in React with the Frontend repository, we could now see the project.</p><br>
-<p>For the backend, we will need the dependencies: bcrypt, cors, dotenv, express, jsonwebtoken, mongoose, nodemailer, and nodemon.</p>
+<p>For the backend, we will need the dependencies: bcrypt, cors, dotenv, express, jsonwebtoken, mongoose, nodemailer, and nodemon.</p><br>
+
+<h2>Installing the project</h2>
+<code>git clone https://github.com/Danyel2608/ProjectFinalPerpetual.git</code>
+
+<br><h3>Intalling dependences</h3>
+
+<code>cd PERPETUAL-TATTOO</code>
+
+<br><h4>1. Fronted</h4>
+<code>cd Frontend/</code>
+<code>npm install</code>
+<code>cd ..</code>
+<br><h4>2. Backend</h4>
+<code>cd Backend/</code>
+<code>npm install</code>
+<code>sudo systemctl start mongodb.service</code>
+
+<br><h2>Database</h2>
+<br><p>- Set up MongoDB: Make sure you have a MongoDB instance running.<code>sudo systemctl status mongod.service</code></p>
+<br><p>- Exit with Ctrl + C</p>
+<br><p>- Go to the root project <code>cd ..</code></p>
+<br><p>- Extract the zip file: <code>unzip BBDD.zip</code></p>
+<br><p>- Import the dummy database file ("BBDD") to your MongoDB Compas:</p>
+<code>mongoimport --uri="mongodb://localhost:27017/Perpetual" --collection=logins --file=BBDD/logins.metadata.json</code>
+<code>mongoimport --uri="mongodb://localhost:27017/Perpetual" --collection=dates --file=BBDD/dates.metadata.json</code>
+
+<h3>Create the .env folder</h3>
+<p>- <code>cd Backend/</code></p>
+<p>-Create the .env folder, copy and paste into the .env folder in the root of the backend directory.<br>
+ <code>PORT=8001<br>
+MONGO_URI=mongodb://localhost:27017/Perpetual<br>
+TOKEN_SECRET=b819d1c87b4036a40c0a5ed3fd90de4c6bcc3977c5fbc936291a100702b30016<br>
+REFRESH_TOKEN_SECRET=5aea95ccd33020810ec7f951f385d9f3378655de24f5a7004d286b4b6f85b7b7<br>
+</code></p>
+
+<h2>Running</h2>
+<h3>1.Backend</h3>
+<br>
+<code>npm run dev</code>
+
+<br><p>Message: "Server running on port 8001
+Successfully connected to the database!!"</p>
+
+<br><h3>2.Frontend</h3>
+<code>npm start</code>
+
 <br>
 <h2>Basic</h2>
-<p>I wanted to show how logins, users and dates are structured within my database.</p>
+<p>I wanted to show how logins and dates are structured within my database.</p>
 <li style="list-style: decimal"><strong>Logins</strong></li><br>
     <h5>An example of the login model:</h5><br>
 {
